@@ -4,7 +4,7 @@ millerrabin
 
 Pure-Python implementation of the `Miller–Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__.
 
-|pypi| |readthedocs|
+|pypi| |readthedocs| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/millerrabin.svg#
    :target: https://badge.fury.io/py/millerrabin
@@ -13,6 +13,14 @@ Pure-Python implementation of the `Miller–Rabin primality test <https://en.wik
 .. |readthedocs| image:: https://readthedocs.org/projects/millerrabin/badge/?version=latest
    :target: https://millerrabin.readthedocs.io/en/latest/?badge=latest
    :alt: Read the Docs documentation status.
+
+.. |actions| image:: https://github.com/lapets/millerrabin/workflows/lint-test-cover-docs/badge.svg#
+   :target: https://github.com/lapets/millerrabin/actions/workflows/lint-test-cover-docs.yml
+   :alt: GitHub Actions status.
+
+.. |coveralls| image:: https://coveralls.io/repos/github/lapets/millerrabin/badge.svg?branch=main
+   :target: https://coveralls.io/github/lapets/millerrabin?branch=main
+   :alt: Coveralls test coverage summary.
 
 Purpose
 -------
