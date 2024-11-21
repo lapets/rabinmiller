@@ -2,7 +2,7 @@
 millerrabin
 ===========
 
-Pure-Python implementation of the `Miller–Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__.
+Pure-Python implementation of the `Miller-Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__.
 
 |pypi| |readthedocs| |actions| |coveralls|
 
@@ -24,7 +24,7 @@ Pure-Python implementation of the `Miller–Rabin primality test <https://en.wik
 
 Purpose
 -------
-This library provides a pure-Python implementation of the `Miller–Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__. Originally based on a `simple implementation <https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#Python>`__, this library prioritizes portability and readability. If performance is a priority, `other libraries <https://pypi.org/project/miller-rabin/>`__ may be more appropriate.
+This library provides a pure-Python implementation of the `Miller-Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__. Based on a `simple implementation <https://rosettacode.org/wiki/Miller%E2%80%93Rabin_primality_test#Python>`__, this library prioritizes portability and readability. If performance is a priority, `other libraries <https://pypi.org/project/miller-rabin/>`__ may be more appropriate.
 
 Installation and Usage
 ----------------------

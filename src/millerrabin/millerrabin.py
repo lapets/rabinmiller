@@ -11,6 +11,14 @@ def millerrabin(number: int, rounds: int = 10) -> bool:
     """
     Pure-Python implementation of the Miller-Rabin primality test.
 
+    :param number: Nonnegative integer to be tested for primality.
+    :param rounds: Number of randomly generated base values to consider when testing.
+
+    The Miller-Rabin primality test may return a false positive with low probability,
+    but never returns a false negative. A return value of ``False`` guarantees that the
+    input is composite; a return value of ``True`` indicates that there is a high
+    likelihood that the input is prime.
+
     >>> millerrabin(2)
     True
     >>> millerrabin(4)
@@ -21,9 +29,12 @@ def millerrabin(number: int, rounds: int = 10) -> bool:
     False
     >>> millerrabin(0) or millerrabin(1)
     False
+    >>> any(millerrabin(i * i) for i in range(2, 1000))
+    False
 
-    Any attempt to invoke this function with an argument that does not have the
-    expected types raises an exception.
+    Any attempt to invoke this function with an argument that does not
+    have the expected types (or does not fall within the supported range)
+    raises an exception.
 
     >>> millerrabin('abc')
     Traceback (most recent call last):
