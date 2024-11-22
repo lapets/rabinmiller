@@ -1,12 +1,12 @@
 """
 Pure-Python implementation of the
-`Miller-Rabin primality test <https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test>`__.
+`Rabin-Miller primality test <https://en.wikipedia.org/wiki/Rabin-Miller_primality_test>`__.
 """
 from __future__ import annotations
 import doctest
 import secrets
 
-def millerrabin(number: int, rounds: int = 10) -> bool:
+def rabinmiller(number: int, rounds: int = 10) -> bool:
     # pylint: disable=too-many-branches
     """
     Pure-Python implementation of the Miller-Rabin primality test.
@@ -19,36 +19,36 @@ def millerrabin(number: int, rounds: int = 10) -> bool:
     input is composite; a return value of ``True`` indicates that there is a high
     likelihood that the input is prime.
 
-    >>> millerrabin(2)
+    >>> rabinmiller(2)
     True
-    >>> millerrabin(4)
+    >>> rabinmiller(4)
     False
-    >>> millerrabin(9999777777776655544433333333222111111111)
+    >>> rabinmiller(9999777777776655544433333333222111111111)
     True
-    >>> millerrabin(9999777777776655544433333333222111111115)
+    >>> rabinmiller(9999777777776655544433333333222111111115)
     False
-    >>> millerrabin(0) or millerrabin(1)
+    >>> rabinmiller(0) or rabinmiller(1)
     False
-    >>> any(millerrabin(i * i) for i in range(2, 1000))
+    >>> any(rabinmiller(i * i) for i in range(2, 1000))
     False
 
     Any attempt to invoke this function with an argument that does not
     have the expected types (or does not fall within the supported range)
     raises an exception.
 
-    >>> millerrabin('abc')
+    >>> rabinmiller('abc')
     Traceback (most recent call last):
       ...
     TypeError: number must be an integer
-    >>> millerrabin(-123)
+    >>> rabinmiller(-123)
     Traceback (most recent call last):
       ...
     ValueError: number must be a nonnegative integer
-    >>> millerrabin(123, 'abc')
+    >>> rabinmiller(123, 'abc')
     Traceback (most recent call last):
       ...
     TypeError: number of rounds must be an integer
-    >>> millerrabin(123, 0)
+    >>> rabinmiller(123, 0)
     Traceback (most recent call last):
       ...
     ValueError: number of rounds must be a positive integer

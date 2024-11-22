@@ -1,8 +1,8 @@
-millerrabin module
+rabinmiller module
 ==================
 
 
-.. automodule:: millerrabin.millerrabin
+.. automodule:: rabinmiller.rabinmiller
    :members:
    :undoc-members:
    :show-inheritance:
