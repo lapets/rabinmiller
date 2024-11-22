@@ -1,6 +1,6 @@
 [project]
 name = "rabinmiller"
-version = "0.0.0a0"
+version = "0.1.0"
 description = "Pure-Python implementation of the Miller-Rabin primality test."
 license = {text = "MIT"}
 authors = [

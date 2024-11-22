@@ -9,7 +9,7 @@ import secrets
 def rabinmiller(number: int, rounds: int = 10) -> bool:
     # pylint: disable=too-many-branches
     """
-    Pure-Python implementation of the Miller-Rabin primality test.
+    Pure-Python implementation of the Rabin-Miller primality test.
 
     :param number: Nonnegative integer to be tested for primality.
     :param rounds: Number of randomly generated base values to consider when testing.
