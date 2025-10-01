@@ -17,9 +17,12 @@ Documentation = "https://rabinmiller.readthedocs.io"
 [project.optional-dependencies]
 docs = [
     "toml~=0.10.2",
-    "sphinx~=5.0",
-    "sphinx-rtd-theme~=2.0.0",
-    "sphinx-autodoc-typehints~=1.23.0"
+    "sphinx~=5.0; python_version <= '3.12'",
+    "sphinx~=7.4; python_version > '3.12'",
+    "sphinx-rtd-theme~=2.0.0; python_version <= '3.12'",
+    "sphinx-rtd-theme~=3.0; python_version > '3.12'",
+    "sphinx-autodoc-typehints~=1.23.0; python_version <= '3.12'",
+    "sphinx-autodoc-typehints~=2.3; python_version > '3.12'"
 ]
 test = [
     "pytest~=7.4; python_version < '3.12'",
