@@ -34,11 +34,37 @@ This library is available as a `package on PyPI <https://pypi.org/project/rabinm
 
     python -m pip install rabinmiller
 
-The library can be imported in the usual way:
+The library can be imported in the usual manner:
 
 .. code-block:: python
 
     from rabinmiller import rabinmiller
+
+Examples
+^^^^^^^^
+
+The Rabin-Miller primality test may return a false positive with low probability, but never returns a false negative. A return value of 
+``False`` guarantees that the input is composite; a return value of ``True`` indicates that there is a high likelihood that the input is prime:
+
+.. code-block:: python
+
+    >>> rabinmiller(2)
+    True
+    >>> rabinmiller(4)
+    False
+    >>> rabinmiller(9999777777776655544433333333222111111111)
+    True
+    >>> rabinmiller(9999777777776655544433333333222111111115)
+    False
+    >>> rabinmiller(int(''.join([
+    ...     '129600000000000000000000000000060069996000000000000000',
+    ...     '0000000092808755643600000000000000000004779682424746201'
+    ... ])))
+    False
+    >>> rabinmiller(0) or rabinmiller(1)
+    False
+    >>> any(rabinmiller(i * i) for i in range(2, 1000))
+    False
 
 Development
 -----------
